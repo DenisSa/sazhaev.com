@@ -2,12 +2,10 @@ const config = require('./src/config');
 
 module.exports = {
   siteMetadata: {
-    title: 'Brittany Chiang',
+    title: 'Denis Sazhaev',
     description:
-      'Brittany Chiang is a software engineer who specializes in building (and occasionally designing) exceptional digital experiences.',
-    siteUrl: 'https://brittanychiang.com', // No trailing slash allowed!
-    image: '/og.png', // Path to your image you placed in the 'static' folder
-    twitterUsername: '@bchiang7',
+      'Denis Sazhaev is a software engineer with extensive experience in building high-quality applications that have stood the test of time.',
+    siteUrl: 'https://sazhaev.com', // No trailing slash allowed!
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

@@ -8,6 +8,7 @@ import { Icon } from '@components/icons';
 import { usePrefersReducedMotion } from '@hooks';
 
 const StyledProjectsSection = styled.section`
+  max-width: 1000px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -181,7 +182,6 @@ const Projects = () => {
               title
               tech
               github
-              external
             }
             html
           }
@@ -206,10 +206,10 @@ const Projects = () => {
     revealProjects.current.forEach((ref, i) => sr.reveal(ref, srConfig(i * 100)));
   }, []);
 
-  const GRID_LIMIT = 6;
+  const GRID_LIMIT = 3;
   const projects = data.projects.edges.filter(({ node }) => node);
-  const firstSix = projects.slice(0, GRID_LIMIT);
-  const projectsToShow = showMore ? projects : firstSix;
+  const projectLimit = projects.slice(0, GRID_LIMIT);
+  const projectsToShow = showMore ? projects : projectLimit;
 
   const projectInner = node => {
     const { frontmatter, html } = node;
@@ -264,9 +264,12 @@ const Projects = () => {
   };
 
   return (
-    <StyledProjectsSection>
-      <h2 ref={revealTitle}>Other Noteworthy Projects</h2>
-
+    <StyledProjectsSection id="projects">
+      <h2 className="numbered-heading">Some of my home projects</h2>
+      <text>
+        While my best work is proprietary and cannot be shared, here are a few projects I've spent
+        time on in order to make my own life easier and to learn new technologies
+      </text>
       <Link className="inline-link archive-link" to="/archive" ref={revealArchiveLink}>
         view the archive
       </Link>
