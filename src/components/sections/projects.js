@@ -266,10 +266,6 @@ const Projects = () => {
   return (
     <StyledProjectsSection id="projects">
       <h2 className="numbered-heading">Some of my home projects</h2>
-      <text>
-        While my best work is proprietary and cannot be shared, here are a few projects I've spent
-        time on in order to make my own life easier and to learn new technologies
-      </text>
       <Link className="inline-link archive-link" to="/archive" ref={revealArchiveLink}>
         view the archive
       </Link>
