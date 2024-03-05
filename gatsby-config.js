@@ -25,6 +25,18 @@ module.exports = {
         theme_color: config.colors.navy,
         display: 'minimal-ui',
         icon: 'src/images/logo.png',
+        icons: [
+          {
+            src: '/favicons/favicon-16x16.png',
+            sizes: '16x16',
+            type: 'image/png',
+          },
+          {
+            src: '/favicons/favicon-32x32.png',
+            sizes: '32x32',
+            type: 'image/png',
+          },
+        ],
       },
     },
     `gatsby-plugin-offline`,
