@@ -42,7 +42,6 @@ const Layout = ({ children, location }) => {
   return (
     <>
       <Head />
-
       <div id="root">
         <ThemeProvider theme={theme}>
           <GlobalStyle />
