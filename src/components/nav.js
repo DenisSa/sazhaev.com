@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import { navLinks } from '@config';
-import { useScrollDirection, usePrefersReducedMotion } from '@hooks';
+import { useScrollDirection } from '@hooks';
 import { Menu } from '@components';
 
 const StyledHeader = styled.header`
@@ -136,17 +136,12 @@ const Nav = ({ isHome }) => {
   const [setIsMounted] = useState(!isHome);
   const scrollDirection = useScrollDirection('down');
   const [scrolledToTop, setScrolledToTop] = useState(true);
-  const prefersReducedMotion = usePrefersReducedMotion();
 
   const handleScroll = () => {
     setScrolledToTop(window.pageYOffset < 50);
   };
 
   useEffect(() => {
-    if (prefersReducedMotion) {
-      return;
-    }
-
     const timeout = setTimeout(() => {
       setIsMounted(true);
     }, 100);

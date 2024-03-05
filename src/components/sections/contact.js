@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { srConfig, email } from '@config';
 import sr from '@utils/sr';
-import { usePrefersReducedMotion } from '@hooks';
 
 const StyledContactSection = styled.section`
   max-width: 600px;
@@ -43,13 +42,8 @@ const StyledContactSection = styled.section`
 
 const Contact = () => {
   const revealContainer = useRef(null);
-  const prefersReducedMotion = usePrefersReducedMotion();
 
   useEffect(() => {
-    if (prefersReducedMotion) {
-      return;
-    }
-
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
