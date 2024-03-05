@@ -132,8 +132,7 @@ const BlinkyLink = styled.div`
   }
 `;
 
-const Nav = ({ isHome }) => {
-  const [setIsMounted] = useState(!isHome);
+const Nav = () => {
   const scrollDirection = useScrollDirection('down');
   const [scrolledToTop, setScrolledToTop] = useState(true);
 
@@ -142,9 +141,7 @@ const Nav = ({ isHome }) => {
   };
 
   useEffect(() => {
-    const timeout = setTimeout(() => {
-      setIsMounted(true);
-    }, 100);
+    const timeout = setTimeout(() => {}, 100);
 
     window.addEventListener('scroll', handleScroll);
 
