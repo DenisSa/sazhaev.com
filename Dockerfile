@@ -1,0 +1,7 @@
+FROM node:14.16.0-slim
+
+WORKDIR /app
+
+ENTRYPOINT [ "./entrypoint.sh" ]
+EXPOSE 8000
+STOPSIGNAL SIGKILL
