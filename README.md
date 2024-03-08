@@ -1,5 +1,15 @@
 ## 🛠 Installation & Set Up
 
+### With Docker
+
+1. Run the docker-compose file.
+
+   ```sh
+   docker-compose up
+   ```
+
+### Natively
+
 1. Install the Gatsby CLI
 
    ```sh
