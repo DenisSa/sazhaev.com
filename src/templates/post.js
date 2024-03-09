@@ -7,7 +7,7 @@ import styled from 'styled-components';
 import { Layout } from '@components';
 
 const StyledPostContainer = styled.main`
-  max-width: 1000px;
+  max-width: 1200px;
 `;
 const StyledPostHeader = styled.header`
   margin-bottom: 50px;
